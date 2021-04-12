@@ -7,11 +7,14 @@ const router = express.Router();
 
 // Routes
 
-router.get('/:id', (req, res) => {
+router.get('/:id', (req, res, next) => {
 
     const { id } = req.params;
-    const project = projects[+ id];
 
+    if (id >= projects.length) 
+        return next();
+
+    const project = projects [ id ];
     res.render('project', { project });
 
 });

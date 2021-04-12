@@ -2,6 +2,7 @@ const express = require('express');
 
 const mainRoutes = require('./routes');
 const projectRoutes = require('./routes/projects');
+const { handlePageNotFoundError, handleServerError } = require('./errorHandlers');
 
 // Variables
 
@@ -11,7 +12,7 @@ const app = express();
 
 app.set('view engine', 'pug');
 
-// Set Up A Static Server
+// Set Up Static Server
 
 app.use(express.static('public'));
 
@@ -19,6 +20,11 @@ app.use(express.static('public'));
 
 app.use(mainRoutes);
 app.use('/projects', projectRoutes);
+
+// Error Handlers
+
+app.use(handlePageNotFoundError);
+app.use(handleServerError);
 
 // Start The Server
 
