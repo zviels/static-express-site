@@ -14,7 +14,7 @@ app.set('view engine', 'pug');
 
 // Set Up Static Server
 
-app.use(express.static('public'));
+app.use('/static', express.static('public'));
 
 // Routes
 
