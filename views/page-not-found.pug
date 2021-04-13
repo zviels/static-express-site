@@ -1,0 +1,8 @@
+extends layout
+block content
+    article.portfolio-intro
+        h1.error-status #{ error.status }
+        p.error-message #{ error.message }
+        .button-box
+            a(href='/')
+                p.back-button Go Back To Homepage
