@@ -22,7 +22,7 @@ body {
   line-height: 1.5;
   color: #0a0a0a;
   background: #fefefe;
-  background: #000;
+  background: #1f1f1f;
   transform: translateX(0px);
   transition: all 0.4s ease-out;
 }
@@ -32,7 +32,7 @@ article {
 }
 
 h1,h2,h3,h4,h5,p {
-  font-family: 'Merriweather', serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h5 {
@@ -137,7 +137,7 @@ nav a span {
   height: 100%;
   min-height: 100%;
   padding: 20px;
-  background: #000;
+  background: #1f1f1f;
 }
 
 .sidebar-info-box {
@@ -158,6 +158,14 @@ nav a span {
   padding: 10px;
 }
 
+.dev-intro-box a {
+  transition: 0.5s;
+}
+
+.dev-intro-box a:hover {
+  color: white;
+}
+
 .sidebar h5 {
   color: #fefefe;
   margin: 0 auto 0.5rem;
@@ -167,7 +175,7 @@ nav a span {
   text-rendering: optimizeLegibility;
   line-height: 1.6;
   font-size: 14px;
-  color: #999
+  color: #ADADAD
 }
 
 .sidebar a {
@@ -176,7 +184,7 @@ nav a span {
   font-size: 13px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: #555;
+  color: #7a7a7a;
 }
 
 .header {
@@ -291,13 +299,20 @@ nav a span {
 .btn-link {
   display: block;
   text-align: center;
-  color: #fefefe;
+  color: #f5f5f5;
   width: 100%;
   max-width: 255px;
   margin: auto 0 5px 0;
   padding: 0.85em 1em;
-  background-color: #333;
+  background-color: #1f1f1f;
   border: 1px solid transparent;
+  transition: 0.5s;
+}
+
+.btn-link:hover {
+  color: #1f1f1f;
+  background-color: white;
+  border: 1px solid #1f1f1f;
 }
 
 /* 
@@ -378,15 +393,81 @@ article.portfolio-intro p.error-message {
 
 .button-box a p.back-button {
   text-align: center;
-  background-color: black;
-  width: 40%;
-  padding: 10px 20px;
-  color: white;
-  border-radius: 25px;
-  transition: 1s;
+  transition: 0.5s;
 }
 
-.button-box .back-button:hover {
-  background-color: grey;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+.button-box p.back-button:hover {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  transform: translate(-1px);
+}
+
+/* Styles For Social Media Buttons */
+
+.social-media-btn {
+  transition: 0.5s;
+}
+
+#linkedin {
+  background-color: #0274b3;
+}
+
+#linkedin:hover {
+  background-color: white;
+  color: #0274b3;
+  border: 1px solid #0274b3;
+}
+
+#github {
+  background-color: #171516;
+}
+
+#github:hover {
+  background-color: white;
+  color: #171516;
+  border: 1px solid #171516;
+}
+
+#twitter {
+  background-color: #1DA1F2;
+}
+
+#twitter:hover {
+  background-color: white;
+  color: #1DA1F2;
+  border: 1px solid #1DA1F2;
+}
+
+/* Thumbnail Animations */
+
+.cell {
+  transition: 0.5s;
+}
+
+.cell:hover {
+  transform: rotate(5deg);
+}
+
+.cell:hover:nth-of-type(2n) {
+  transform: rotate(-5deg);
+}
+
+/* Profile Picture Animation */
+
+.sidebar .thumbnail {
+  transition: 0.5s ease-in;
+}
+
+.sidebar .thumbnail:hover {
+  transform: scale(1.1);
+}
+
+/* Animations For Project Images */
+
+.project-img {
+  transition: 0.5s ease-in;
+  filter: saturate(0.5);
+}
+
+.project-img:hover {
+  filter: none;
 }
