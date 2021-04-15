@@ -5,7 +5,7 @@ const handlePageNotFoundError = (req, res, next) => {
     const error = new Error('Page Not Found!');
     error.status = 404;
 
-    console.error('Error Occurred! The App Was Pointed To An Undefined Route.');
+    console.error('Oops! The Page You Are Looking For Does Not Exist!');
     res.status(404).render('page-not-found', { error });
 
 }
@@ -14,7 +14,7 @@ const handlePageNotFoundError = (req, res, next) => {
 
 const handleServerError = (error, req, res, next) => {
     
-    console.error('Server Error Occurred.');
+    console.error('Oops! It Looks Like The Server Encountered An Error!');
     res.status(error.status || 500).render('error', { error });
     
 }
