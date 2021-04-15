@@ -14,7 +14,7 @@ router.get('/:id', (req, res, next) => {
     if (id >= projects.length) 
         return next();
 
-    const project = projects [ id ];
+    const project = projects [ + id ];
     res.render('project', { project });
 
 });
