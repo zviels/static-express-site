@@ -4,7 +4,7 @@ A full stack project I built for my portfolio during my studies at [Treehouse](h
 
 I created a JSON file to store all the data about the projects I have built, and used [Pug JS](https://pugjs.org/) to complete provided templates that utilize the JSON to generate the markup that is ultimately displayed in the browser.
 
-I then used NodeJS and Express to -
+I also used NodeJS and Express to -
 
 - Import the required dependencies. 
 - Link the JSON with the Pug templates.
