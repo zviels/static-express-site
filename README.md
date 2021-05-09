@@ -24,7 +24,7 @@ I then used NodeJS and Express to -
 ## Preview
 
 <a href="https://static-express-website.herokuapp.com">
-  <img src="https://deab9i1yeabp0.cloudfront.net/github/treehouse/static-express-site/static-express-site.gif" alt="App Preview" width="100%">
+  <img src="https://i.imgur.com/iMiGKEz.gif" alt="App Preview" width="100%">
 </a>
 
 ## Quick Start
